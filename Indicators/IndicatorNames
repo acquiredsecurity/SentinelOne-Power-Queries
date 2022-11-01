@@ -1,0 +1,9 @@
+Title: Quering for Indicators in your Environment
+description: Find Useful Indicators being mapped by S1. Learn to create a field name 'IndocatorCount' and sort indicators in your environment. 
+Kill Chain: Installation
+date: 11/1/2022
+operating_system: Any
+author: B-Rad
+powerquery: indicator.name = *
+|group IndicatorCount = count(indicator.name ) by indicator.name
+| sort -IndicatorCount
